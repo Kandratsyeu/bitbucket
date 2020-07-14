@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-width: 400px;
+}
+form {
+	margin: 0 auto;
+	max-width: 400px;
+	text-align: center;
+}
+fieldset {
+	padding: 5px;
+}
+hr {
+	margin: 5px;
+}
+.false {
+	box-shadow: 0 0 6px red;
+}
