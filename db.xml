@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+	<user>
+		<login>admin</login>
+		<name>admin</name>
+		<password>admin</password>
+		<email>admin@local.loc</email>
+	</user>
+</users>
