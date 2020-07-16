@@ -3,7 +3,8 @@
 <head>
 	<title>Регистрация/авторизация</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style.css?2">
+	<script src="formsHandler.js?17"></script>
 </head>
 <body>
 	<form name="registration" method="post">
@@ -32,7 +33,20 @@
 			<button type="submit">Зарегистрироваться</button>
 		</fieldset>
 	</form>
+	<form name="autorization" method="post">
+		<fieldset>
+			<legend>Авторизация</legend>
+			<label for="login">Логин: </label>
+			<br>
+			<input type="text" name="login">
+			<br>
+			<label for="pass">Пароль:</label>
+			<br>
+			<input type="password" name="pass">
+			<hr>
+			<button type="submit">Войти</button>
+		</fieldset>
+	</form>
 	<div id="requestResult"></div>
-	<script src="registration.js"></script>
 </body>
 </html>
