@@ -1,14 +1,15 @@
 <?php
+include 'answer.php';
 $newUser = json_decode($_POST["params"], true);
 if (file_exists('db.xml')) {
     $userList = simplexml_load_file('db.xml');
     $registrationResult = false;
     foreach ($userList->user as $user) {
 		if ((string)$user->login == $newUser['login']) {
-			$registrationResult = "Пользователь с таким логином существует";
+			$registrationResult = new Answer(2, "Пользователь с таким логином существует");
 		}
 		if ((string)$user->email == $newUser['email']) {
-			$registrationResult = "Пользователь с таким адресом электронной почты существует";
+			$registrationResult = new Answer(3, "Пользователь с таким адресом электронной почты существует");
 		}
 	}
 	if (!$registrationResult) {
@@ -18,8 +19,9 @@ if (file_exists('db.xml')) {
 		$user->addChild('password', md5($newUser['pass']));
 		$user->addChild('email', $newUser['email']);
 		$userList->saveXML('db.xml');
-		$registrationResult = "Пользователь успешно зарегистрирован";
+		$registrationResult = new Answer(4, "Пользователь успешно зарегистрирован");
 	}
+	$registrationResult = json_encode($registrationResult);
 	echo $registrationResult;
 } else {
     exit('Нет доступа к db.xml.');

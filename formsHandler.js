@@ -58,18 +58,16 @@ document.addEventListener('DOMContentLoaded', function() {
 		request.send(parameters);
 		request.onreadystatechange = function() {
 			if (request.readyState == 4 && request.status == 200){
-				if (request.responseText == 0) {
-					if (handler == 'autorization.php') {
-						document.querySelector('#requestResult').innerHTML = '';	
-					} else {
-						document.querySelector('#requestResult').innerHTML = 'Проверьте правильность ввода данных';
+				let answer = JSON.parse(request.responseText);
+				if (handler == 'registration.php') {
+					document.querySelector('#requestResult').innerHTML = answer.text;
+				}
+				if (handler == 'autorization.php') {
+					if (answer.code) {
+						registrationForm.hidden = true;
+						autorizationForm.hidden = true;	
 					}
-				} else if (handler == 'autorization.php' || handler == 'session.php') {
-					document.querySelector('#requestResult').innerHTML = 'Hello, '+request.responseText;
-					registrationForm.hidden = true;
-					autorizationForm.hidden = true;
-				} else {
-					document.querySelector('#requestResult').innerHTML = request.responseText;					
+					document.querySelector('#requestResult').innerHTML = answer.text;
 				}
 			}
 		}

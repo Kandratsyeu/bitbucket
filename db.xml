@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
 
-<user><login>admin</login><name>admin</name><password>21232f297a57a5a743894a0e4a801fc3</password><email>admin@local.loc</email></user><user><login>qwe</login><name>name</name><password>202cb962ac59075b964b07152d234b70</password><email>qwe@we.ww</email></user><user><login>admin2</login><name>sergey</name><password>202cb962ac59075b964b07152d234b70</password><email>admin2@local.loc</email></user><user><login>admin3</login><name>admin3</name><password>202cb962ac59075b964b07152d234b70</password><email>admin3@local.loc</email></user></users>
+<user><login>qwe</login><name>name</name><password>202cb962ac59075b964b07152d234b70</password><email>qwe@we.ww</email></user><user><login>admin2</login><name>sergey</name><password>202cb962ac59075b964b07152d234b70</password><email>admin2@local.loc</email></user><user><login>admin3</login><name>admin3</name><password>202cb962ac59075b964b07152d234b70</password><email>admin3@local.loc</email></user><user><login>admin</login><name>name</name><password>202cb962ac59075b964b07152d234b70</password><email>admin@local.loc</email></user></users>
